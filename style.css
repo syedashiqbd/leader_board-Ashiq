@@ -14,10 +14,12 @@ body {
   background-color: #f3f1ff;
 }
 .header {
+  width: 100vw;
   background-color: #562eff;
 }
 .navbar {
-  width: 870px;
+  background-color: #562eff;
+  max-width: 870px;
   height: 94px;
   color: white;
   display: flex;
@@ -29,6 +31,7 @@ body {
   align-items: center;
   gap: 15px;
 }
+
 .left_item img {
   width: 40px;
   height: 50px;
@@ -42,6 +45,7 @@ body {
   align-items: center;
   gap: 36px;
 }
+
 .right_item ul li {
   list-style: none;
   text-decoration: none;
@@ -50,13 +54,14 @@ body {
   display: flex;
   gap: 30px;
 }
+
 .right_item ul li a {
   color: white;
   text-decoration: none;
   font-size: 16px;
 }
 .container {
-  width: 870px;
+  max-width: 870px;
   margin: 0 auto;
 }
 .top_area {
@@ -177,4 +182,56 @@ small {
 }
 .time p {
   color: #ff4a60;
+}
+@media only screen and (max-width: 650px) {
+  .players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 29px;
+  }
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 26px;
+  }
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .navbar {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .players {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 29px;
+  }
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 26px;
+  }
+  .courses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .left_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+  .right_item ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .right_item {
+    display: flex;
+    gap: 15px;
+  }
 }
